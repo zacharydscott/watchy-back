@@ -6,6 +6,7 @@ const app = express();
 const cors = require('cors');
 const db = require('./dao/db-connection');
 
+
 port = 5656;
 
 //parsing the request for further handling
