@@ -1,6 +1,7 @@
 const dotenv = require('dotenv');
 dotenv.config();
-
+console.log(process.env.frm_un);
+console.log(process.env.frm_ps);
 module.exports = {
   un: process.env.frm_un,
   ps: process.env.frm_ps,
