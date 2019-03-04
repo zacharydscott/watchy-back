@@ -18,6 +18,11 @@ app.unsubscribe(bodyParser.urlencoded({ extended: false }));
 app.get('/', (req, res) => {
   res.send('hello');
 });
+
+app.get('/do_you_love_me', (req, res) => {
+  res.send('Yes, of course I do!');
+});
+
 app.get('/boards', (req, res) => {
   console.log('accessed');
   db.many("set schema 'public'; SELECT name FROM board;")
