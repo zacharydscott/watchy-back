@@ -15,7 +15,9 @@ app.use(cors());
 app.use(bodyParser.json());
 
 app.unsubscribe(bodyParser.urlencoded({ extended: false }));
-
+app.get('/', (req, res) => {
+  res.send('hello');
+});
 app.get('/boards', (req, res) => {
   console.log('accessed');
   db.many("set schema 'public'; SELECT name FROM board;")
